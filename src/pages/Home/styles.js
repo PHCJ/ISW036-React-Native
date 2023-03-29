@@ -20,5 +20,16 @@ const styles = StyleSheet.create({
     color: "#000",
     fontWeight:"bold",
   },
+  ButtonAula:{
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "90%",
+    backgroundColor: "#f5deb3",
+    paddingTop: 14,
+    paddingBottom: 14,
+    marginLeft: 12,
+    marginTop: 30,
+  },
 });
 export default styles;
