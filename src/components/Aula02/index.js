@@ -1,20 +1,27 @@
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 import React from "react";
 
-export default function NumberRandon(props) {
+const props = {
+  min: 0,
+  max: 10,
+};
+
+export default function NumberRandon() {
   const numbers = [];
   for (let i = 0; i < 5; i++) {
     const randomNumber = getRandomNumber(props);
     numbers.push(randomNumber);
   }
+
   return (
-    <>
+    <View style={styles.container}>
       <Text style={styles.linha}>{numbers.join("\n")}</Text>
 
       <Text style={styles.soma}>
-        Soma dos números: {numbers.reduce((total, current) => total + current, 0)}
+        Soma dos números:{" "}
+        {numbers.reduce((total, current) => total + current, 0)}
       </Text>
-    </>
+    </View>
   );
 }
 
@@ -23,6 +30,12 @@ const getRandomNumber = (props) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#000",
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+  },
   linha: {
     fontSize: 54,
     color: "blue",

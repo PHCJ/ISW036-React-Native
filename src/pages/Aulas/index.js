@@ -1,12 +1,17 @@
 import React from "react";
-import { View } from "react-native";
-import Aula02 from "../../components/Aula02";
+import { View, TouchableOpacity, Text } from "react-native";
+import Atividade2 from "../../components/Aula02";
 import styles from "./styles";
 
-export default function App() {
+export default function App({ navigation }) {
   return (
     <View style={styles.container}>
-      <Aula02 max={10} min={0} />
+      <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate('Atividade 2')}>
+        <Text style={styles.textButton}>Atividade 2</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate('Atividade 3')}>
+        <Text style={styles.textButton}>Atividade 3</Text>
+      </TouchableOpacity>
     </View>
   );
 }

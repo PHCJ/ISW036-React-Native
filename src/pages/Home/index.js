@@ -10,8 +10,8 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.ButtonCalculadora} onPress={() => navigation.navigate('Calculadora')}>
         <Text style={styles.textButtonCalculator}>Calculadora</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.ButtonAula} onPress={() => navigation.navigate('Aulas')}>
-        <Text style={styles.textButtonCalculator}>Aulas</Text>
+      <TouchableOpacity style={styles.ButtonAula} onPress={() => navigation.navigate('Atividades')}>
+        <Text style={styles.textButtonCalculator}>Atividades</Text>
       </TouchableOpacity>
     </View>
   );
