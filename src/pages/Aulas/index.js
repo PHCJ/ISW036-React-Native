@@ -14,6 +14,9 @@ export default function App({ navigation }) {
       <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate('Atividade 4')}>
         <Text style={styles.textButton}>Atividade 4</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate('Atividade 5')}>
+        <Text style={styles.textButton}>Atividade 5</Text>
+      </TouchableOpacity>
     </View>
   );
 }
