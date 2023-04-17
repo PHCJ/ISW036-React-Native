@@ -7,8 +7,8 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View >
       <Title titulo="App Paulo"/>
-      <TouchableOpacity style={styles.ButtonCalculadora} onPress={() => navigation.navigate('Calculadora')}>
-        <Text style={styles.textButtonCalculator}>Calculadora</Text>
+      <TouchableOpacity style={styles.ButtonCalculadora} onPress={() => navigation.navigate('Calculadoras')}>
+        <Text style={styles.textButtonCalculator}>Calculadoras</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.ButtonAula} onPress={() => navigation.navigate('Atividades')}>
         <Text style={styles.textButtonCalculator}>Atividades</Text>

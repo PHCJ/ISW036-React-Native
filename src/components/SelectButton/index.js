@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { View, Button, Text, TouchableOpacity } from "react-native";
 import styles from "./style";
-import Form from '../Form/'
+import Imc from "../Form/";
+import Calc from '../Calculadora/'
+
 
 const Screen1 = () => {
   return (
-    <View >
-      <Form />
+    <View>
+      <Calc />
     </View>
   );
 };
 
 const Screen2 = () => {
   return (
-    <View style={styles.menuButton}>
-     <Text style={styles.msg}>Em construção</Text>
+    <View>
+      <Imc />
     </View>
   );
 };
@@ -31,13 +33,13 @@ const TwoScreensComponent = () => {
   };
 
   return (
-    <View >
+    <View>
       <View style={styles.menuButton}>
         <TouchableOpacity onPress={onPressButton1} style={styles.btnStyle}>
-          <Text style={styles.btnText}>IMC</Text>
+          <Text style={styles.btnText}>Comum</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={onPressButton2} style={styles.btnStyle}>
-          <Text style={styles.btnText}>Idade</Text>
+          <Text style={styles.btnText}>IMC</Text>
         </TouchableOpacity>
       </View>
       {showScreen1 ? <Screen1 /> : <Screen2 />}

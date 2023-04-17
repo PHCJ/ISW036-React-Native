@@ -15,7 +15,7 @@ const Navigation = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Calculadora" component={Calculator} />
+      <Stack.Screen name="Calculadoras" component={Calculator} />
       <Stack.Screen name="Atividades" component={Aulas} />
       <Stack.Screen name="Atividade 2" component={Atividade2} />
       <Stack.Screen name="Atividade 3" component={Atividade03} />
