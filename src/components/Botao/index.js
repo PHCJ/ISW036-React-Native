@@ -1,10 +1,12 @@
 import {Text, TouchableOpacity } from 'react-native'
 import styles from './styles'
 
-export default function NewButton(simbolo) {
+const NewButton = ({element, onPress}) => {
   return (
-    <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>{simbolo}</Text>
+  <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text style={styles.buttonText}>{element}</Text>
     </TouchableOpacity>
   )
 }
+
+export default NewButton
