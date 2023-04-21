@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Botao from '../Botao/index'
-//import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 
 const index = () => {
@@ -15,20 +15,32 @@ const index = () => {
   return (
     <View style={styles.container}>
       <View style={styles.contentBoxView}>
+        <Text style={styles.boxView}></Text>
         <Text style={styles.boxView}>{icalc}</Text>
       </View>
       <View style={styles.contentBoxButton}>
 
         <View style={styles.numBoxButton}>
-          <Botao></Botao>
+          <Botao element={"C"}></Botao>
           <Botao key={","} element={","} onPress={() => { setIcalc(',') }}></Botao>
           {numberButtons.map((element) =>
             (<Botao key={element} element={element} onPress={() => { setIcalc(numberButtons[element]) }} />))
           }
+          <Botao element={"X²"} />
+          <Botao element={"X³"} />
+          <TouchableOpacity style={{alignItems:'center',justifyContent:'center', margin:8}}>
+          <Ionicons name="backspace-outline"
+            size={50} color="black"
+          />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.operationBoxButton}>
-          
+          {operationButtons.map((element) => (
+            <Botao key={element} element={element} onPress={() => {
+              setIcalc(element)
+            }} />
+          ))}
         </View>
       </View>
     </View>
@@ -50,8 +62,12 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   boxView: {
-    borderWidth: 1,
-    height: 100,
+    height: '50%',
+    textAlign: 'right',
+    textAlignVertical: 'bottom',
+    fontSize: 44,
+    paddingRight: 20,
+    paddingBottom: 20,
   },
   contentBoxButton: {
     backgroundColor: "#ccc",
@@ -60,15 +76,14 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
   },
   numBoxButton: {
-    backgroundColor: "#fff",
-    width: "50%",
+    width: "57.5%",
     flexDirection: 'row',
     flexWrap: 'wrap-reverse',
   },
   operationBoxButton: {
-    backgroundColor: "#fff",
     width: "20%",
   },
 });
