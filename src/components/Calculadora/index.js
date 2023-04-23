@@ -27,12 +27,11 @@ const index = () => {
   const operatorEvent = (oprt) => {
     const inputDisplay = parseFloat(display);
     if (oprt === "x²") {
-      total = calculateValue(inputDisplay, 2, oprt)
-      console.warn(total);
+      total = calculateValue(inputDisplay, 2, oprt);
       setValue(total);
       setDisplay(total);
-      setDisplay2(`${display}${oprt}`)
-    }else if (value === null) {
+      setDisplay2(`${display}${oprt}`);
+    } else if (value === null) {
       const inputDisplay = parseFloat(display);
       setValue(inputDisplay);
       setDisplay(`${display}${oprt}`);
