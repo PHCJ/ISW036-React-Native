@@ -1,12 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../pages/Home';
-import Calculator from '../pages/Calculator';
-import Aulas from '../pages/Aulas';
-import Atividade2 from '../components/Aula02/';
-import Atividade03 from '../components/Atividade03/';
-import Atividade04 from '../components/Atividade04/';
-import Atividade05 from '../components/Atividade05/';
+import Home from '../pages/Home/index';
+import Calculator from '../pages/Calculator/index';
+import Aulas from '../pages/Aulas/index';
+import Atividade2 from '../components/Aula02/index';
+import Atividade03 from '../components/Atividade03/index';
+import Atividade04 from '../components/Atividade04/index';
+import Atividade05 from '../components/Atividade05/index';
 
 
 const Stack = createStackNavigator();

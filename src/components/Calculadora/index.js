@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Botao from "../Botao/index";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const index = () => {
+export default function Calculadora() {
   const [display, setDisplay] = useState("0");
   const [display2, setDisplay2] = useState(null);
   const [value, setValue] = useState(null);
@@ -182,5 +182,3 @@ const styles = StyleSheet.create({
     width: "20%",
   },
 });
-
-export default index;

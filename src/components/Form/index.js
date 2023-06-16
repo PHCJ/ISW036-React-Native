@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import ResultadoIMC from "../ResultadoImc/";
+import ResultadoIMC from "../ResultadoImc/index";
 import styles from './style'
 
 export default function Form() {

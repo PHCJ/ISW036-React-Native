@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, Button, StyleSheet, View } from 'react-native'
 
-export default comp => {
+export default function Atividade04() {
     const [numero1, setNumero1] = useState(0)
     const [numero2, setNumero2] = useState(2)
     const inc1 = () => setNumero1(numero1 + 25)
@@ -37,9 +37,5 @@ const styles = StyleSheet.create({
     },
     fontGrande: {
         fontSize: 30,
-    },
-    fontMedia: {
-        fontSize: 20,
-        fontFamily: 'Arial',
     },
 });

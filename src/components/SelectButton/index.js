@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { View, Button, Text, TouchableOpacity } from "react-native";
 import styles from "./style";
-import Imc from "../Form/";
-import Calc from '../Calculadora/'
+import Imc from "../Form/index";
+import Calc from '../Calculadora/index'
 
 
 const Screen1 = () => {
