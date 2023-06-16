@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Botao from "../Botao/index";
-import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Calculadora() {
   const [display, setDisplay] = useState("0");
@@ -126,7 +125,7 @@ export default function Calculadora() {
             }}
             onPress={btnBackSpace}
           >
-            <Ionicons name="backspace-outline" size={50} color="black" />
+            <Text style={{fontSize:30, paddingBottom:10}}>del</Text>
           </TouchableOpacity>
         </View>
 
