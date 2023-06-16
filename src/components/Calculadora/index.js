@@ -125,7 +125,7 @@ export default function Calculadora() {
             }}
             onPress={btnBackSpace}
           >
-            <Text style={{fontSize:30, paddingBottom:10}}>del</Text>
+            <Text style={{ fontSize: 30, paddingBottom: 10 }}>del</Text>
           </TouchableOpacity>
         </View>
 
@@ -143,7 +143,7 @@ export default function Calculadora() {
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
